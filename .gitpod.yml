@@ -1,7 +1,11 @@
-image:
-  file: .gitpod.dockerfile
+
 
 tasks:
   - command: |
+      install-packages mysql-server
+      mkdir -p /var/run/mysqld /var/log/mysql
+      chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade
+      echo "mysql-bashrc-launch.sh" >> ~/.bashrc
+
       mysql -e "CREATE DATABASE todos"
       mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';"
