@@ -1,1 +1,1 @@
-FROM devfactory/worksapce-mysql
+FROM devfactory/worksapce-full
