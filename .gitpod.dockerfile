@@ -1,1 +1,1 @@
-FROM devfactory/worksapce-full
+FROM devfactory/workspace-mysql
