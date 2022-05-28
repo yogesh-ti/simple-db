@@ -15,7 +15,7 @@ RUN mkdir -p ~/.pg_ctl/bin ~/.pg_ctl/sockets \
  && chmod +x ~/.pg_ctl/bin/*
 ENV PATH="$PATH:$HOME/.pg_ctl/bin"
 ENV DATABASE_URL="postgresql://gitpod@localhost"
-ENV PGHOSTADDR="0.0.0.0"
+ENV PGHOSTADDR="127.0.0.1"
 ENV PGDATABASE="postgres"
 
 # This is a bit of a hack. At the moment we have no means of starting background
