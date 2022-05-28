@@ -2,7 +2,7 @@ ARG BASE_IMAGE=devfactory/workspace-full
 FROM $BASE_IMAGE
 
 # Docker build does not rebuild an image when a base image is changed, increase this counter to trigger it.
-ENV TRIGGER_REBUILD=1
+ENV TRIGGER_REBUILD=2
 # Install PostgreSQL
 RUN sudo install-packages postgresql-12 postgresql-contrib-12
 
