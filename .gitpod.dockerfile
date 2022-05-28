@@ -1,1 +1,1 @@
-FROM devfactory/workspace-postgres
+FROM devfactory/workspace-full
