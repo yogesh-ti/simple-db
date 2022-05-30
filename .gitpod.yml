@@ -1,8 +1,9 @@
 image:
   file: .gitpod.dockerfile
 
-# tasks:
-#   - command: |
-
+tasks:
+  - command: |
+      psql -c "CREATE DATABASE youtube;"
+      psql -c "ALTER USER gitpod WITH PASSWORD 'mysuperpassword'"
 #       mysql -e "CREATE DATABASE todos"
 #       mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';"
